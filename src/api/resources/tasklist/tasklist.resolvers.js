@@ -27,5 +27,15 @@ export const tasklistResolvers = {
   Mutation: {
     newTasklist,
     updateTasklist
+  },
+
+  Tasklist: {
+    async tasks(tasklist) {
+      const populated = await tasklist
+      .populate('tasks')
+      .execPopulate()
+
+      return populated.tasks
+    }
   }
 }
