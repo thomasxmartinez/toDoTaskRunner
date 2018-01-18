@@ -1,0 +1,29 @@
+type Tasklist {
+  id: ID!
+  title: String!
+  tasks: [Task]!
+  complete: Boolean!
+}
+
+input UpdatedTasklist {
+  id: ID!
+  title: String
+  tasks: [ID!]
+  complete: Boolean
+}
+
+input NewTasklist {
+  title: String
+  tasks: [ID!]
+  complete: Boolean
+}
+
+extend type Query {
+  Tasklist(id: ID!): Tasklist!
+  allTasklists: [Tasklist]!
+}
+
+extend type Mutation {
+  newTasklist(input: NewTasklist!): Tasklist!
+  updateTasklist(input: UpdatedTasklist!): Tasklist!
+}
