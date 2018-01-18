@@ -18,6 +18,10 @@ const updateTask = (_, {input}) => {
   return Task.findByIdAndUpdate(id, update, {new: true}).exec()
 }
 
+const removeTask = (_, {id}) => {
+  return Task.findByIdAndRemove(id).exec()
+}
+
 export const taskResolvers = {
   Query: {
     allTasks,
@@ -26,6 +30,7 @@ export const taskResolvers = {
 
   Mutation: {
     newTask,
-    updateTask
+    updateTask,
+    removeTask
   }
 }

@@ -1,11 +1,13 @@
 type User {
   id: ID!
   username: String!
+  tasklists: [Tasklist]!
   createdAt: String!
   updatedAt: String!
 }
 
 input UpdatedUser {
+  id: ID!
   username: String!
 }
 

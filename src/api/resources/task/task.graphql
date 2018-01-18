@@ -22,5 +22,6 @@ extend type Query {
 
 extend type Mutation {
   newTask(input: NewTask!): Task!
+  removeTask(id: ID!): Task!
   updateTask(input: UpdatedTask!): Task!
 }
