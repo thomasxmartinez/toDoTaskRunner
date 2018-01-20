@@ -8,6 +8,8 @@
 
 *localhost:3000/docs*
 *examples below on how to access api through graphiql once user hits /docs route*
+
+*if using a mac must delete SET from "test:unit"
 built using node/mongo/graphQL
 
 ![alt text](https://i.imgur.com/FoaamTu.png)
