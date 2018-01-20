@@ -10,4 +10,4 @@
 
 built using node/mongo/graphQL
 
-![alt text](https://imgur.com/FoaamTu)
+![alt text](https://i.imgur.com/FoaamTu.png)
