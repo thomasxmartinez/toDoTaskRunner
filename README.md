@@ -9,3 +9,5 @@
 *localhost:3000/docs*
 
 built using node/mongo/graphQL
+
+![alt text](https://imgur.com/FoaamTu)
