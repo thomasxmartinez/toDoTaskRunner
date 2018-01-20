@@ -18,6 +18,10 @@ const updateTasklist = (_, {input}) => {
   return Tasklist.findByIdAndUpdate(id, update, {new: true}).exec()
 }
 
+const removeTasklist = (_, { id }) => {
+  return Tasklist.findByIdAndRemove(id).exec();
+};
+
 export const tasklistResolvers = {
   Query: {
     allTasklists,
@@ -26,7 +30,8 @@ export const tasklistResolvers = {
 
   Mutation: {
     newTasklist,
-    updateTasklist
+    updateTasklist,
+    removeTasklist
   },
 
   Tasklist: {
